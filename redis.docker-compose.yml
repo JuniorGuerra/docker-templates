@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  cache:
+  # cambiar dependiendo la version
+    image: redis:6.2-alpine
+    restart: always
+    ports:
+      - '6379:6379'
+    # command: redis-server --save 20 1 --loglevel warning --requirepass Kr@krKr3kr # descomentar en caso de usar password
+    volumes: 
+      - cache:/data
+
+    environment:
+      REDIS_HOST: cache
+      REDIS_PORT: 6379
+      # REDIS_PASSWORD: Kr@krKr3kr # Descomentar esta linea en caso de usar password
+volumes:
+  cache:
+    driver: local
