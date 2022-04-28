@@ -2,7 +2,7 @@ version: '3.8'
 services:
   cache:
   # cambiar dependiendo la version
-    image: redis:6.2-alpine
+    image: redislabs/rejson:latest
     restart: always
     ports:
       - '6379:6379'
