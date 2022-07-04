@@ -1,0 +1,8 @@
+{
+	"verbose": false,
+	"ignore": [".git", "dist/*"],
+	"watch": ["*.*", ".yml"],
+	"ext": "yml",
+	"exec": "docker-compose up -d",
+	"signal": "SIGTERM"
+}

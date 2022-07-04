@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+ adminer:
+    container_name: adminer
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
