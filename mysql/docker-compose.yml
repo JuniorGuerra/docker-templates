@@ -12,7 +12,7 @@ services:
       --max_connections=1000
       --innodb_file_per_table
     environment:
-      - MYSQL_ROOT_PASSWORD=Kr@krKr3kr
+      - MYSQL_ROOT_PASSWORD=Jr@Jr17
     volumes:
       - dbdata:/var/lib/mysql
       # - dbdata: /var/lib/mysql
