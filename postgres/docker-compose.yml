@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: "StrongPassword123!"
+    volumes:
+      - b-pgadmin-data:/var/lib/pgadmin
+      - ./servers.json:/pgadmin4/servers.json
+
+  postgres:
+    container_name: postgres
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: "SuperSecurePassword123!"
+      POSTGRES_DB: chatbot_widget_database
+    ports:
+      - 5432:5432
+    volumes:
+      - b-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  b-pgadmin-data:
+  b-postgres-data:

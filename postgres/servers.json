@@ -1,0 +1,14 @@
+{
+    "Servers": {
+      "1": {
+        "Name": "Default PostgreSQL",
+        "Group": "Servers",
+        "Host": "postgres",
+        "Port": 5432,
+        "MaintenanceDB": "chatbot_widget_database",
+        "Username": "root",
+        "SSLMode": "prefer"
+      }
+    }
+  }
+  
